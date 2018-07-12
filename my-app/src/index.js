@@ -2,37 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
 
 
+function Square(props)
+{
 
-  render() {
-    return (
-      <button className="square" 
-      onClick={()=>this.props.onClick() }>
-        {/* TODO */}
+  return (
 
-          { this.props.value}
-        {/* This is how you do some commenting in JSX
-          <!--<p> Hello this is some text </p>-->
-*/}
-      </button>
-    );
-  }
-
-  // constructor(props){
-
-  //   super(props);
-
-  //   this.state = {
-
-  //     value: null,
-  //   };
-  // }
-  // function my_random_func(){
-  //     console.log("i am a regular old javascript func");
-
-  // }
+<button className="square" onClick={props.onClick}>
+{props.value}
+</button>
+  );
 }
 
 
@@ -56,7 +36,7 @@ class Board extends React.Component {
 
       //this is aprt of a bigger mutable vs immutable discussion
       //immutable allows easier state tracking and state-tracking
-      
+
 
 
   }
